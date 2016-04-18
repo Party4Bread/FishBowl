@@ -36,8 +36,13 @@ namespace FishBowl
             {
                 Sname = b.FileName;
             }
-            string a = Prompt.ShowDialog("비밀번호를 입력해주세요", "");
-            if (DialogResult.Yes==MessageBox.Show("묻는다", "압축을해서 크기를 줄일까요?(암호화 복호화시간이 더 증가)", MessageBoxButtons.YesNo))
+            string a = Prompt.ShowDialog("비밀번호를 입력해주세요   ", "");
+            if (a != Prompt.ShowDialog("비밀번호를 다시 입력해주세요    ", ""))
+            {
+                MessageBox.Show("비밀번호가 다릅니다");
+                return;
+            }
+            if (DialogResult.Yes==MessageBox.Show("압축을해서 크기를 줄일까요?(암호화 복호화시간이 더 증가)","묻는다", MessageBoxButtons.YesNo))
             {
                 cm=true;
             }
@@ -104,7 +109,7 @@ namespace FishBowl
                 Text = caption,
                 StartPosition = FormStartPosition.CenterScreen
             };
-            Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = text, Width = 400 };
             TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 };
             Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
             confirmation.Click += (sender, e) => { prompt.Close(); };

@@ -14,3 +14,10 @@ C:\Users\BREADY\Downloads\FishBowl\FishBowl\obj\Debug\FishBowl.pdb
 C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\bin\Debug\FishBowl.exe.config
 C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.exe
 C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.pdb
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\bin\Debug\FishBowl.exe
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\bin\Debug\FishBowl.pdb
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\bin\Debug\SevenZipSharp.dll
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.csprojResolveAssemblyReference.cache
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.Form1.resources
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.Properties.Resources.resources
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.csproj.GenerateResource.Cache
