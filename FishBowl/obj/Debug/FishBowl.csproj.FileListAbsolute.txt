@@ -21,3 +21,5 @@ C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debu
 C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.Form1.resources
 C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.Properties.Resources.resources
 C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\obj\Debug\FishBowl.csproj.GenerateResource.Cache
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\bin\Debug\ManyMonkeysEncryptionUtils.dll
+C:\Users\BREADY\Documents\Visual Studio 2015\Projects\FishBowl\FishBowl\bin\Debug\ManyMonkeysEncryptionUtils.pdb

@@ -10,13 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FishBowl.OtherFish;
-using FishBowl.Twofish;
 using SevenZip;
+using SubEnc;
+using System.Threading;
+
 namespace FishBowl
 {
 
     public partial class Form1 : Form
     {
+        Thread t;
+        bool canClose = true;
         public Form1()
         {
             InitializeComponent();
@@ -51,8 +55,11 @@ namespace FishBowl
                 cm=false;
             }
             if (Oname != "" && Sname != "")
-            { 
-                //encryptfile(MD5HashFunc(a),Oname);
+            {
+                
+                t = new Thread(() => Encrypter.encrypt(Oname, a, Sname));
+                t.Start();
+                waitForThread();
                 if (cm)
                 {
                     compress("_temp.$$$",Sname);
@@ -63,6 +70,33 @@ namespace FishBowl
         private void DecBtn_Click(object sender, EventArgs e)
         {
 
+        }
+        void waitForThread()
+        {
+            canClose = false;
+            Bitmap bmp = Screenshot.TakeSnapshot(panel1);
+            BitmapFilter.GaussianBlur(bmp, 1);
+            PictureBox pb = new PictureBox();
+            panel1.Controls.Add(pb);
+            pb.Image = bmp;
+            pb.Dock = DockStyle.Fill;
+            pb.BringToFront();
+            pictureBox1.BringToFront();
+            pictureBox1.Visible = true;
+            DecBtn.Enabled = false;
+            EncBtn.Enabled = false;
+            GifImage ima = new GifImage(Properties.Resources.onWork);
+            while (t.IsAlive)
+            {
+                Application.DoEvents();
+                pictureBox1.Image = ima.GetNextFrame();
+            }
+            pb.Hide();
+            DecBtn.Enabled = true;
+            EncBtn.Enabled = true;
+            pictureBox1.Visible = false;
+            canClose = true;
+            MessageBox.Show("fin");
         }
         public string MD5HashFunc(string str)
         {
@@ -95,6 +129,11 @@ namespace FishBowl
             {
                 this.Cursor = Cursors.Default;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     public static class Prompt
