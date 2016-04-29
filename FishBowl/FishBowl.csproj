@@ -130,9 +130,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image1.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\CC2A7063-3570-4888-AF58-6B24D53244C8.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

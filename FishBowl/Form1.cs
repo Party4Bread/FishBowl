@@ -46,6 +46,7 @@ namespace FishBowl
                 MessageBox.Show("비밀번호가 다릅니다");
                 return;
             }
+            /*
             if (DialogResult.Yes==MessageBox.Show("압축을해서 크기를 줄일까요?(암호화 복호화시간이 더 증가)","묻는다", MessageBoxButtons.YesNo))
             {
                 cm=true;
@@ -54,22 +55,46 @@ namespace FishBowl
             {
                 cm=false;
             }
+            */
             if (Oname != "" && Sname != "")
             {
                 
                 t = new Thread(() => Encrypter.encrypt(Oname, a, Sname));
                 t.Start();
                 waitForThread();
-                if (cm)
-                {
-                    compress("_temp.$$$",Sname);
-                }
             }
         }
 
         private void DecBtn_Click(object sender, EventArgs e)
         {
-
+            string Oname = "", Sname = "";
+            OpenFileDialog at = new OpenFileDialog();
+            if (at.ShowDialog() == DialogResult.OK)
+            {
+                Oname = at.FileName;
+            }
+            SaveFileDialog b = new SaveFileDialog();
+            if (b.ShowDialog() == DialogResult.OK)
+            {
+                Sname = b.FileName;
+            }
+            string a = Prompt.ShowDialog("비밀번호를 입력해주세요   ", "");
+            /*
+            if (DialogResult.Yes == MessageBox.Show("압축을해서 크기를 줄일까요?(암호화 복호화시간이 더 증가)", "묻는다", MessageBoxButtons.YesNo))
+            {
+                cm = true;
+            }
+            else
+            {
+                cm = false;
+            }
+            */
+            if (Oname != "" && Sname != "")
+            {
+                t = new Thread(() => Decrypter.decrypt(Oname, a, Sname));
+                t.Start();
+                waitForThread();
+            }
         }
         void waitForThread()
         {
