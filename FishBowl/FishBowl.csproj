@@ -130,7 +130,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CC2A7063-3570-4888-AF58-6B24D53244C8.gif" />
+    <None Include="bin\Debug\OnWork.gif" />
+    <Content Include="Resources\OnWork.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

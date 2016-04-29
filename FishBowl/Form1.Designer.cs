@@ -70,11 +70,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::FishBowl.Properties.Resources.onWork;
-            this.pictureBox1.Location = new System.Drawing.Point(135, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
@@ -89,7 +88,6 @@
             this.Text = "FishBowl";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -110,11 +110,10 @@ namespace FishBowl
             pictureBox1.Visible = true;
             DecBtn.Enabled = false;
             EncBtn.Enabled = false;
-            GifImage ima = new GifImage(Properties.Resources.onWork);
+            pictureBox1.Image = Properties.Resources.OnWork;
             while (t.IsAlive)
             {
                 Application.DoEvents();
-                pictureBox1.Image = ima.GetNextFrame();
             }
             pb.Hide();
             DecBtn.Enabled = true;
